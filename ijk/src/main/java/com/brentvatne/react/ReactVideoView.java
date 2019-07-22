@@ -233,7 +233,7 @@ public class ReactVideoView extends FrameLayout implements LifecycleEventListene
     private boolean isCompleted = false;
     private boolean mUseNativeControls = false;
 
-    public ReactVideoView2(ThemedReactContext themedReactContext) {
+    public ReactVideoView(ThemedReactContext themedReactContext) {
         super(themedReactContext);
 
         mThemedReactContext = themedReactContext;
