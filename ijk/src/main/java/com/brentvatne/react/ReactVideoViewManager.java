@@ -70,7 +70,6 @@ public class ReactVideoViewManager extends SimpleViewManager<ReactVideoView> {
                 "ScaleToFill", "FIT_XY",
                 "ScaleAspectFit", "FIT_CENTER",
                 "ScaleAspectFill", "CENTER_CROP");
-        );
     }
 
     @ReactProp(name = PROP_SRC)
