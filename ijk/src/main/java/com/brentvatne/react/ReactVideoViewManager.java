@@ -6,7 +6,6 @@ import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.yqritc.scalablevideoview.ScalableType;
 
 import java.util.Map;
 
@@ -104,7 +103,7 @@ public class ReactVideoViewManager extends SimpleViewManager<ReactVideoView> {
 
     @ReactProp(name = PROP_RESIZE_MODE)
     public void setResizeMode(final ReactVideoView videoView, final String resizeModeOrdinalString) {
-        videoView.setResizeModeModifier(ScalableType.values()[Integer.parseInt(resizeModeOrdinalString)]);
+       // videoView.setResizeModeModifier(ScalableType.values()[Integer.parseInt(resizeModeOrdinalString)]);
     }
 
     @ReactProp(name = PROP_REPEAT, defaultBoolean = false)
