@@ -67,10 +67,10 @@ public class ReactVideoViewManager extends SimpleViewManager<ReactVideoView> {
     @Nullable
     public Map getExportedViewConstants() {
         return MapBuilder.of(
-                "ScaleNone", Integer.toString(ScalableType.LEFT_TOP.ordinal()),
-                "ScaleToFill", Integer.toString(ScalableType.FIT_XY.ordinal()),
-                "ScaleAspectFit", Integer.toString(ScalableType.FIT_CENTER.ordinal()),
-                "ScaleAspectFill", Integer.toString(ScalableType.CENTER_CROP.ordinal())
+                "ScaleNone", "LEFT_TOP",
+                "ScaleToFill", "FIT_XY",
+                "ScaleAspectFit", "FIT_CENTER",
+                "ScaleAspectFill", "CENTER_CROP")
         );
     }
 
