@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+def bType = "full" //lazyLoad,full, blank is normal
+def ijkVersion = "0.8.8"
+
+dependencies {
+
+    implementation "com.facebook.react:react-native:+"
+    api 'com.android.support:support-v4:28.0.0'
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api group: 'com.android.support', name: 'recyclerview-v7', version: '28.0.0'
+
+
+    api "com.github.tcking:ijkplayer-java:${ijkVersion}"
+
+    if ("" == bType) {
+        api "com.github.tcking:ijkplayer-armv5:${ijkVersion}"
+        api "com.github.tcking:ijkplayer-arm64:${ijkVersion}"
+        api "com.github.tcking:ijkplayer-armv7a:${ijkVersion}"
+        compile "com.github.tcking:ijkplayer-java:${ijkVersion}"
+    } else if ("full" == bType) {
+        api "com.github.tcking:ijkplayer-armv5:${ijkVersion}-full"
+        api "com.github.tcking:ijkplayer-arm64:${ijkVersion}-full"
+        api "com.github.tcking:ijkplayer-armv7a:${ijkVersion}-full"
+        api "com.github.tcking:ijkplayer-java:${ijkVersion}-full"
+    }
+
+}
