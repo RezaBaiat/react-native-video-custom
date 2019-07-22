@@ -12,7 +12,6 @@ import android.os.Build;
 import android.os.Handler;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.view.WindowManager;
 import android.view.View;
 import android.view.Window;
 import android.webkit.CookieManager;
@@ -23,8 +22,8 @@ import com.android.vending.expansion.zipfile.ZipResourceFile;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.ReadableMap;
-import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableArray;
+import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeArray;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
@@ -35,10 +34,9 @@ import com.yqritc.scalablevideoview.Size;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
-import java.lang.Math;
-import java.math.BigDecimal;
 
 import javax.annotation.Nullable;
 

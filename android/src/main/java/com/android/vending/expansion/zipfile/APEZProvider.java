@@ -19,8 +19,6 @@ package com.android.vending.expansion.zipfile;
 //To implement APEZProvider in your application, you'll want to change
 //the AUTHORITY to match what you define in the manifest.
 
-import com.android.vending.expansion.zipfile.ZipResourceFile.ZipEntryRO;
-
 import android.content.ContentProvider;
 import android.content.ContentProviderOperation;
 import android.content.ContentProviderResult;
@@ -37,6 +35,8 @@ import android.database.MatrixCursor;
 import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.provider.BaseColumns;
+
+import com.android.vending.expansion.zipfile.ZipResourceFile.ZipEntryRO;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
